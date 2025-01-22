@@ -1,0 +1,25 @@
+<h1>GitHub Repo Finder</h1>
+<div class="app-container">
+    <label for="repo" class="label">Select a programming language:</label>
+    <select id="repo" class="dropdown" [(ngModel)]="selectedLanguage">
+      <option *ngFor="let lang of languages" [value]="lang">{{ lang }}</option>
+    </select>
+    <button class="btn-primary" (click)="fetchRandomRepo()">Find Repository</button>
+  
+    <p *ngIf="state === 'Loading...'" class="loading">Loading...</p>
+  
+    <div *ngIf="repository" class="repo-details">
+      <h2 class="repo-name">{{ repository?.name }}</h2>
+     <p class="repo-description" [innerHTML]="formatDescription(repository?.description)"></p>
+      <ul class="repo-stats">
+        <li><strong>Stars:</strong> {{ repository?.stars }}</li>
+        <li><strong>Forks:</strong> {{ repository?.forks }}</li>
+        <li><strong>Open Issues:</strong> {{ repository?.openIssues }}</li>
+      </ul>
+    </div>
+  
+    <div>
+      <button class="btn-secondary" (click)="fetchRandomRepo()">Refresh</button>
+    </div>
+  </div>
+  

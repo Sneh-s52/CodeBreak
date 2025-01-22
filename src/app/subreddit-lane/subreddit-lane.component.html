@@ -1,0 +1,21 @@
+<div class="lane">
+  <div class="lane-header">
+    <h2>{{ subreddit }}</h2>
+    <div class="lane-actions">
+      <button class="refresh-btn" (click)="refresh()">Refresh</button>
+      <button class="delete-btn" (click)="deleteLane()">Delete</button>
+    </div>
+  </div>
+
+  <div class="lane-content">
+    <div *ngIf="loading" class="loading">Loading...</div>
+    <div *ngIf="error" class="error">{{ error }}</div>
+    <ul *ngIf="posts" class="posts-list">
+      <li *ngFor="let post of posts" class="post-item">
+        <a [href]="post.url" target="_blank" class="post-title">{{ post.title }}</a>
+        <p class="post-author">Author: {{ post.author }}</p>
+        <p class="post-votes">Votes: {{ post.ups }}</p>
+      </li>
+    </ul>
+  </div>
+</div>

@@ -1,0 +1,52 @@
+/* Reset and Base Styles */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9; /* Light background */
+  }
+  
+  /* Header and Navigation Styling */
+  .navbar {
+    background-color: #1e293b; /* Navy blue */
+    padding: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  }
+  
+  .navbar nav {
+    display: flex;
+    justify-content: center; /* Center navigation */
+    align-items: center;
+  }
+  
+  .nav-links {
+    list-style: none; /* Remove bullets */
+    display: flex;
+    gap: 2rem; /* Space between links */
+    margin: 0;
+    padding: 0;
+  }
+  
+  .nav-link {
+    text-decoration: none; /* Remove underline */
+    color: #ffffff; /* White text */
+    font-size: 1.1rem;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .nav-link:hover {
+    color: #38bdf8; /* Highlight color (sky blue) on hover */
+  }
+  
+  .nav-link:active {
+    color: #0ea5e9; /* Slightly darker blue for active state */
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .nav-links {
+      flex-direction: column; /* Stack links vertically on small screens */
+      gap: 1rem;
+    }
+  }
+  

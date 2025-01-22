@@ -1,0 +1,24 @@
+<div class="pomodoro-container">
+    <header>
+      <div class="mode-buttons">
+        <button [class.active]="mode === 'focus'" (click)="setMode('focus')">Focus</button>
+        <button [class.active]="mode === 'shortBreak'" (click)="setMode('shortBreak')">Short Break</button>
+        <button [class.active]="mode === 'longBreak'" (click)="setMode('longBreak')">Long Break</button>
+      </div>
+    </header>
+  
+    <main>
+      <div class="timer-display">
+        {{ minutes }}:{{ seconds | number: '2.0' }}
+      </div>
+      <div class="timer-controls">
+        <button *ngFor="let increment of increments" (click)="adjustTimer(increment)">
+          +{{ increment }} min
+        </button>
+      </div>
+      <button class="start-button" (click)="toggleTimer()">
+        {{ isRunning ? 'Pause' : 'Start' }}
+      </button>
+    </main>
+  </div>
+  

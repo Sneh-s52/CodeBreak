@@ -1,0 +1,120 @@
+.lane {
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 16px;
+    margin-bottom: 20px;
+    max-width: 350px;
+    transition: transform 0.2s ease-in-out;
+  
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    }
+  
+    .lane-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #e5e7eb;
+      padding-bottom: 8px;
+      margin-bottom: 16px;
+  
+      h2 {
+        font-size: 18px;
+        font-weight: 600;
+        color: #1f2937;
+        margin: 0;
+      }
+  
+      .lane-actions {
+        display: flex;
+        gap: 10px;
+  
+        button {
+          padding: 6px 12px;
+          font-size: 14px;
+          border-radius: 4px;
+          border: none;
+          cursor: pointer;
+          transition: background-color 0.2s ease-in-out;
+  
+          &.refresh-btn {
+            background-color: #4caf50;
+            color: white;
+  
+            &:hover {
+              background-color: #43a047;
+            }
+          }
+  
+          &.delete-btn {
+            background-color: #f44336;
+            color: white;
+  
+            &:hover {
+              background-color: #e53935;
+            }
+          }
+        }
+      }
+    }
+  
+    .lane-content {
+      .loading {
+        font-size: 14px;
+        color: #3b82f6;
+        text-align: center;
+        margin-bottom: 16px;
+      }
+  
+      .error {
+        font-size: 14px;
+        color: #ef4444;
+        text-align: center;
+        margin-bottom: 16px;
+      }
+  
+      .posts-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+  
+        .post-item {
+          margin-bottom: 12px;
+          padding: 8px;
+          border-radius: 4px;
+          background-color: #f9fafb;
+          box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  
+          .post-title {
+            font-size: 16px;
+            font-weight: 500;
+            color: #2563eb;
+            text-decoration: none;
+            margin-bottom: 4px;
+            display: block;
+            transition: color 0.2s ease-in-out;
+  
+            &:hover {
+              color: #1d4ed8;
+            }
+          }
+  
+          .post-author {
+            font-size: 14px;
+            color: #6b7280;
+            margin: 4px 0;
+          }
+  
+          .post-votes {
+            font-size: 14px;
+            font-weight: 500;
+            color: #1f2937;
+          }
+        }
+      }
+    }
+  }
+  

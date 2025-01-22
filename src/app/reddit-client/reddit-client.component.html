@@ -1,0 +1,12 @@
+<div class="add-lane">
+  <input [(ngModel)]="newSubreddit" placeholder="Enter subreddit name" />
+  <button (click)="addLane()">Add Subreddit</button>
+</div>
+
+<div class="lanes">
+  <app-subreddit-lane
+    *ngFor="let subreddit of subreddits"
+    [subreddit]="subreddit"
+    (delete)="deleteLane(subreddit)">
+  </app-subreddit-lane>
+</div>
