@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
-import LanguageData from '/Users/sneh/Desktop/CV/git-hub-repo/LanguageData.json';
+import LanguageData from '/Users/sneh/Desktop/CV/git-hub-repo/public/assets/LanguageData.json';
 
 @Component({
   selector: 'app-git-repo',
