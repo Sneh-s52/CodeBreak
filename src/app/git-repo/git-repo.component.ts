@@ -3,7 +3,6 @@ import { HttpClient } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import LanguageData from '../../../public/assets/LanguageData.json'
-// import LanguageData from '/public/assets/LanguageData.json';
 
 @Component({
   selector: 'app-git-repo',
